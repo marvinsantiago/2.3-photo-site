@@ -5,3 +5,17 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import "fontawesome/css/font-awesome.css";
+@import "reset-css/reset";
+
+$background-color: #000000;
+$primary-color: #ffffff;
+$font-stack: ;
+$title-pic: #7a7777;
+
+body {
+    color: $primary-color;
+}
+
