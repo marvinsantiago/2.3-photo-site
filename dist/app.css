@@ -1948,3 +1948,13 @@ footer {
     padding: 0; }
   .footer {
     position: relative; } }
+
+@media (max-width: 480px) {
+  nav ul {
+    padding-left: 1.25em;
+    background: #4F4E4E;
+    overflow: hidden;
+    height: 2px;
+    width: 30px;
+    margin: 3px 10px 0 0;
+    box-shadow: 0 0.25em 0 0 #4F4E4E, 0 0.5em 0 0 #4F4E4E; } }
