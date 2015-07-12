@@ -1846,6 +1846,14 @@ html {
 .fa-medium:before {
   content: ""; }
 
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 body {
   background: #333333;
   color: #9D9D9D;
@@ -1866,8 +1874,8 @@ header {
   position: relative; }
   header img {
     border-radius: 50%;
-    height: 150px;
-    width: 150px; }
+    height: 100px;
+    width: 100px; }
   header nav {
     font-weight: strong; }
   header nav ul {
@@ -1889,17 +1897,36 @@ header {
     content: "";
     padding-left: 20px; }
   header .logo {
-    height: 50%;
-    padding: 15px;
-    text-align: center; }
+    text-align: center;
+    padding: 20px 0 0 0; }
+  header .topics {
+    text-align: center;
+    padding-bottom: 20px; }
 
 .photo {
-  position: relative;
-  margin: 0 auto;
-  width: 500px; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; }
+  .photo::after {
+    clear: both;
+    content: "";
+    display: table; }
   .photo .content {
-    position: relative;
-    padding-bottom: 50px; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .photo .content:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 1024px) {
+      .photo .content {
+        float: left;
+        display: block;
+        margin-right: 4.82916%;
+        width: 65.05695%; }
+        .photo .content:last-child {
+          margin-right: 0; } }
     .photo .content img {
       width: 100%; }
     .photo .content span {
@@ -1908,18 +1935,27 @@ header {
     .photo .content .date {
       font-size: 0.5em; }
   .photo .specs {
-    position: absolute;
-    width: 200px;
-    padding: 0;
-    top: 15px;
-    right: -215px; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .photo .specs:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 1024px) {
+      .photo .specs {
+        float: left;
+        display: block;
+        margin-right: 4.82916%;
+        width: 65.05695%; }
+        .photo .specs:last-child {
+          margin-right: 0; } }
     .photo .specs i {
       font-size: 0.7em; }
-  .photo .specs ul li:first-child span {
-    color: #ef5350;
-    font-weight: strong; }
-  .photo .specs ul li span {
-    font-size: 0.7em; }
+    .photo .specs .specs ul li:first-child span {
+      color: #ef5350;
+      font-weight: strong; }
+    .photo .specs .specs ul li span {
+      font-size: 0.7em; }
 
 footer {
   width: 100%;
@@ -1935,19 +1971,6 @@ footer {
     height: 30%;
     width: 30%;
     padding: 10px; }
-
-@media (max-width: 960px) {
-  .body {
-    max-width: 100%;
-    position: relative; }
-  .photo {
-    position: relative; }
-  .specs {
-    position: relative;
-    width: 100%;
-    padding: 0; }
-  .footer {
-    position: relative; } }
 
 @media (max-width: 480px) {
   nav ul {
