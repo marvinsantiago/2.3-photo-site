@@ -82,51 +82,41 @@ header {
     }
 
 }
-    .photo {
-        @include outer-container;
-        width: 80%;
 
+    .photo {
+        @include outer-container(100%);
+        @include omega();
+    }
+    .middle-container {
+        @include span-columns(12);
         .content {
-            @include span-columns(9);
-            @include media(max-width 1024px, 6) {
-                @include span-columns(4);
+            @include span-columns(6);
+            @include shift();
             }
-            // display: block;
-            // padding-bottom: 50px;
-            img {
-                width: 100%;
-                // position: relative;
-                // display: block;
-            }
-            span {
-                padding: 10px;
-                margin: 0;
-            }
-            .date {
+        .date {
             font-size: 0.5em;
-            }
         }
+            // span {
+            //     padding: 10px;
+            //     margin: 0;
+            // }
+            // .date {
+            // font-size: 0.5em;
+            // }
         .specs {
             @include span-columns(3);
-            @include media(max-width 1024px, 6) {
-                @include span-columns(4);
-            }
-            // position: absolute;
-            // width: 200px;
-            // padding: 0;
-            // top: 15px;
-            // right: -215px;
+            @include shift(1);
             i {
-                font-size: 0.7em;
+                font-size: 0.6em;
             }
-        .specs ul li:first-child span {
-            color: #ef5350;
-            font-weight: strong;
         }
-        .specs ul li span {
-            font-size: 0.7em;
-        }
-    }
+            .specs ul li:first-child span {
+                color: #ef5350;
+                font-weight: strong;
+            }
+            // .specs ul li span {
+            //     font-size: 0.7em;
+            // }
 }
 footer {
     width: 100%;
