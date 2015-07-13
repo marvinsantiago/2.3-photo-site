@@ -10,7 +10,7 @@ html {
 
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import 'base';
+@import 'variables';
 @import 'font-awesome';
 @import 'bourbon';
 @import 'neat';
@@ -30,7 +30,7 @@ body {
     color: $photographer;
 }
 .container {
-    @include outer-container();
+    @include outer-container(1140px);
     margin: 0 auto;
 }
 
@@ -83,33 +83,45 @@ header {
 
 }
 
-        .photo {
-            @include span-columns(12);
-        }
-        .content {
-            @include span-columns(6 of 12);
-            @include shift(3);
-            @include media($tablet) {
-                @include span-columns(5);
-            }
-        }
-        .specs {
-            @include span-columns(6 of 12);
-            @include shift(3);
-            @include media($tablet) {
-                @include span-columns(5);
-            }
-                i {
-                    font-size: 0.6em;
-                }
-        }
-        .date {
-                font-size: 0.5em;
-            }
-            .specs ul li:first-child span {
-                color: #ef5350;
-                font-weight: strong;
-            }
+.photo {
+    @include row();
+    padding-bottom: 30px;
+}
+
+.content {
+    @include span-columns(6 of 12);
+    @include shift(3);
+
+    @include media($tablet) {
+        @include shift(0);
+
+        @include span-columns(12 of 12);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+.specs {
+    @include span-columns(3 of 12);
+    @include media($tablet) {
+        @include span-columns(12 of 12);
+    }
+
+    i {
+        font-size: 0.6em;
+    }
+}
+.date {
+    font-size: 0.5em;
+}
+.specs ul li:first-child span {
+    color: #ef5350;
+    font-weight: strong;
+}
+.specs ul li {
+    line-height: 1em;
+}
 
 
 footer {
