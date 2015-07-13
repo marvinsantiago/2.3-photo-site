@@ -1906,8 +1906,7 @@ header {
 .photo {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  margin-right: 0; }
+  margin-right: auto; }
   .photo::after {
     clear: both;
     content: "";
@@ -1925,7 +1924,7 @@ header {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 8.5298%; }
+    margin-left: 17.05961%; }
     .middle-container .content:last-child {
       margin-right: 0; }
   .middle-container .date {
@@ -1945,7 +1944,7 @@ header {
     font-weight: strong; }
 
 footer {
-  width: 100%;
+  max-width: 100%;
   margin: auto;
   display: block;
   padding: 20px 0; }
