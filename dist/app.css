@@ -1858,14 +1858,19 @@ body {
   background: #333333;
   color: #9D9D9D;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
-  max-width: 1040px;
-  margin: 0 auto;
-  position: relative;
-  height: 100%; }
+  font-size: 1.2em; }
 
 .pgrapher {
   color: #FFFFFF; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 header {
   height: 100%;
@@ -1904,44 +1909,37 @@ header {
     padding-bottom: 20px; }
 
 .photo {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .photo::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.middle-container {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .middle-container:last-child {
+  .photo:last-child {
     margin-right: 0; }
-  .middle-container .content {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 17.05961%; }
-    .middle-container .content:last-child {
-      margin-right: 0; }
-  .middle-container .date {
-    font-size: 0.5em; }
-  .middle-container .specs {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-left: 8.5298%; }
-    .middle-container .specs:last-child {
-      margin-right: 0; }
-    .middle-container .specs i {
-      font-size: 0.6em; }
-  .middle-container .specs ul li:first-child span {
-    color: #ef5350;
-    font-weight: strong; }
+
+.content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .content:last-child {
+    margin-right: 0; }
+
+.specs {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .specs:last-child {
+    margin-right: 0; }
+  .specs i {
+    font-size: 0.6em; }
+
+.date {
+  font-size: 0.5em; }
+
+.specs ul li:first-child span {
+  color: #ef5350;
+  font-weight: strong; }
 
 footer {
   max-width: 100%;
@@ -1956,7 +1954,11 @@ footer {
   footer img {
     height: 30%;
     width: 30%;
-    padding: 10px; }
+    padding: 10px;
+    opacity: 1;
+    background: url(http://lorempixel.com/g/400/200) no-repeat; }
+  footer img:hover {
+    opacity: 0.3; }
 
 @media (max-width: 480px) {
   nav ul {
