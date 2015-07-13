@@ -1904,58 +1904,45 @@ header {
     padding-bottom: 20px; }
 
 .photo {
-  max-width: 68em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 80%; }
+  margin-right: 0; }
   .photo::after {
     clear: both;
     content: "";
     display: table; }
-  .photo .content {
+
+.middle-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .middle-container:last-child {
+    margin-right: 0; }
+  .middle-container .content {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
-    .photo .content:last-child {
+    width: 48.82117%;
+    margin-left: 8.5298%; }
+    .middle-container .content:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 1024px) {
-      .photo .content {
-        float: left;
-        display: block;
-        margin-right: 4.82916%;
-        width: 65.05695%; }
-        .photo .content:last-child {
-          margin-right: 0; } }
-    .photo .content img {
-      width: 100%; }
-    .photo .content span {
-      padding: 10px;
-      margin: 0; }
-    .photo .content .date {
-      font-size: 0.5em; }
-  .photo .specs {
+  .middle-container .date {
+    font-size: 0.5em; }
+  .middle-container .specs {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%; }
-    .photo .specs:last-child {
+    width: 23.23176%;
+    margin-left: 8.5298%; }
+    .middle-container .specs:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 1024px) {
-      .photo .specs {
-        float: left;
-        display: block;
-        margin-right: 4.82916%;
-        width: 65.05695%; }
-        .photo .specs:last-child {
-          margin-right: 0; } }
-    .photo .specs i {
-      font-size: 0.7em; }
-    .photo .specs .specs ul li:first-child span {
-      color: #ef5350;
-      font-weight: strong; }
-    .photo .specs .specs ul li span {
-      font-size: 0.7em; }
+    .middle-container .specs i {
+      font-size: 0.6em; }
+  .middle-container .specs ul li:first-child span {
+    color: #ef5350;
+    font-weight: strong; }
 
 footer {
   width: 100%;
