@@ -10,12 +10,13 @@ html {
 
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import 'variables';
+@import 'base';
 @import 'font-awesome';
 @import 'bourbon';
 @import 'neat';
+@import 'grid';
 
-$tablet: new-breakpoint(max-width 1024px 6);
+
 
 body {
     background: $background-color;
@@ -30,6 +31,7 @@ body {
 }
 .container {
     @include outer-container();
+    margin: 0 auto;
 }
 
 header {
@@ -86,9 +88,17 @@ header {
         }
         .content {
             @include span-columns(6 of 12);
+            @include shift(3);
+            @include media($tablet) {
+                @include span-columns(5);
+            }
         }
         .specs {
             @include span-columns(6 of 12);
+            @include shift(3);
+            @include media($tablet) {
+                @include span-columns(5);
+            }
                 i {
                     font-size: 0.6em;
                 }
@@ -106,7 +116,7 @@ footer {
     max-width: 100%;
     margin: auto;
     display: block;
-    padding: 20px 0;
+    padding: 60px 0;
     .demo {
         text-align: center;
         display: block;
