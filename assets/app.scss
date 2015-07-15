@@ -109,7 +109,8 @@ header {
     }
 
     i {
-        font-size: 0.6em;
+        font-size: 1em;
+        padding-right: 0.3em;
     }
 }
 .date {
@@ -120,7 +121,7 @@ header {
     font-weight: strong;
 }
 .specs ul li {
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
 
@@ -149,6 +150,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
     nav ul {
         padding-left: 1.25em;
         background: #4F4E4E;
