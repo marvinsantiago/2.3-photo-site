@@ -1953,7 +1953,8 @@ header {
       .specs:last-child {
         margin-right: 0; } }
   .specs i {
-    font-size: 0.6em; }
+    font-size: 1em;
+    padding-right: 0.3em; }
 
 .date {
   font-size: 0.5em; }
@@ -1963,7 +1964,7 @@ header {
   font-weight: strong; }
 
 .specs ul li {
-  line-height: 1em; }
+  line-height: 1.2em; }
 
 footer {
   max-width: 100%;
@@ -1985,6 +1986,8 @@ footer {
     opacity: 0.3; }
 
 @media (max-width: 480px) {
+  body {
+    padding: 10px; }
   nav ul {
     padding-left: 1.25em;
     background: #4F4E4E;
